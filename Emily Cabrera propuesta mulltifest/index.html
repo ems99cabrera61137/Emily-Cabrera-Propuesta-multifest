@@ -1,0 +1,194 @@
+<html>
+  
+  <head>    
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  </head>
+  
+  <body>
+    
+    <a-scene>
+
+        <a-sound id="audiofile1" src="audios/cancionfondo.mp3" autoplay="true" position="1 1 1" volume="2"></a-sound>
+        <a-assets>
+            <a-asset-item id="3d_aula_obj" src="aulaterminada3.obj" position="0 0 0" scale="1 1 1"></a-asset-item>
+           <a-asset-item id="3d_aula_tex" src="aulaterminada3.mtl"  position="0 0 0" scale="1 1 1"></a-asset-item>
+          </a-assets>
+
+        <a-assets>
+            <img id="img1" src="mask.jpg"></img>
+            <img id="imgesf1" src="patron2.jpg"></img>
+            <img id="imgesf2" src="patron3.jpg"></img>
+            <img id="imgesf3" src="patron1.jpg"></img>
+            <img id="imgesf4" src="patron4.jpg"></img>
+            <img id="imgesf5" src="patron5.jpg"></img>
+            <audio id="audiofille1" src="audios/cancionfondo.mp3"></audio>
+            <audio id="audiloefecto1" src="audios/skullkid.mp3"></audio>
+            <audio id="audifoefecto2" src="audios/see u.mp3"></audio>
+            <audio id="audiroefecto3" src="audios/dollsong.mp3"></audio>
+            <audio id="audiyoefecto4" src="audios/pizarra.mp3"></audio>
+            <audio id="audikoefecto5" src="audios/grito.mp3"></audio>
+            <video id="screaner"  src="videos/screamer2.mp4"></video>
+
+        </a-assets>
+
+        <a-sphere 
+        id="esfera1" 
+        src="patron2.jpg"
+        radius="0"
+        position="7 0 -3"
+        rotation="0 0 0"
+        scale="1 1 1"
+        animation__position="property: object3D.position.y; to: 1; dir: alternate; dur: 2000; loop: true"
+        animation__mouseenter="property: scale; to: 1.2 1.2 1.2; dur: 300; startEvents: mouseenter"
+        animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave">>
+        <a-text position="-0.5 1.5 0" value="Alone"></a-text>
+        <a-sound id="audioefecto2" src="audios/see u.mp3" autoplay="false" loop="true" position="1 1 1" volume="10"></a-sound>
+      </a-sphere>
+     
+
+      <a-sphere 
+        id="esfera2" 
+        src="patron3.jpg"
+        radius="0"
+        position="-7 0 -3"
+        rotation="0 0 0"
+        scale="1 1 1"
+        animation__position="property: object3D.position.y; to: 1; dir: alternate; dur: 2000; loop: true"
+        animation__mouseenter="property: scale; to: 1.2 1.2 1.2; dur: 300; startEvents: mouseenter"
+        animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave">>
+        <a-text position="-0.5 1.5 0" value="Help me"></a-text>
+        <a-sound id="audioefecto1" src="audios/skullkid.mp3" autoplay="false" loop="true"  position="-7 0 -3" volume="10"></a-sound>
+      </a-sphere>
+
+      <a-sphere 
+        id="esfera3" 
+        src="patron1.jpg"
+        radius="0"
+        position="0 0 -12"
+        rotation="0 0 0"
+        scale="1 1 1"
+        animation__position="property: object3D.position.y; to: 1; dir: alternate; dur: 2000; loop: true"
+        animation__mouseenter="property: scale; to: 1.2 1.2 1.2; dur: 300; startEvents: mouseenter"
+        animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave">>
+        <a-text position="-0.5 1.5 0" value="It hurts"></a-text>
+        <a-sound id="audioefecto3" src="audios/dollsong.mp3" autoplay="false" loop="true"  position="0 0 -12" volume="10"></a-sound>
+      </a-sphere>
+
+      <a-sphere 
+        id="esfera4" 
+        src="patron4.jpg"
+        radius="0"
+        position="20 0 16"
+        rotation="0 0 0"
+        scale="1 1 1"
+        animation__position="property: object3D.position.y; to: 1; dir: alternate; dur: 2000; loop: true"
+        animation__mouseenter="property: scale; to: 1.2 1.2 1.2; dur: 300; startEvents: mouseenter"
+        animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave">>
+        <a-sound id="audioefecto5" src="audios/grito.mp3" autoplay="false" loop="true"  position="20 0 16" volume="10"></a-sound>
+      </a-sphere>
+
+      <a-sphere 
+        id="esfera5" 
+        src="patron5.jpg"
+        radius="0"
+        position="-20 0 5"
+        rotation="0 0 0"
+        scale="1 1 1"
+        animation__position="property: object3D.position.y; to: 1; dir: alternate; dur: 2000; loop: true"
+        animation__mouseenter="property: scale; to: 1.2 1.2 1.2; dur: 300; startEvents: mouseenter"
+        animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave">>
+        <a-text position="-0.3 1.5 0"  value="End"></a-text>
+        <a-sound id="audioefecto4" src="audios/pizarra.mp3" autoplay="false" loop="true"  position="20 0 16" volume="10"></a-sound>
+        
+      </a-sphere>
+
+      <a-video id="#screamer" src="videos/screamer2.mp4"  loop="false" width="8" height="5" position="0 0.5 18"></a-video>
+
+        <a-sky id="cielo" src="#img1"></a-sky>
+
+        <a-light color="white" position="0 5 0" look-at="3d_aula_obj"></a-light>
+        <a-light type="penumbra"color="white" position="0 -1 0" look-at="3d_aula_obj"></a-light>
+   
+    <a-obj-model src="#3d_aula_obj" mtl="#3d_aula_tex"  position="0 0 0" scale="1 1 1"></a-obj-model>
+        
+      <a-entity camera look-controls scale="0.2 0.2 0.2" position="0 0 0"></a-entity>> 
+    
+         <a-camera> 
+           <a-cursor> </a-cursor>
+         </a-camera>
+
+         
+
+         <script>
+          var c1 = document.querySelector("#esfera1");
+          var c2 = document.querySelector("#esfera2");
+          var c3 = document.querySelector("#esfera3");
+          var c4 = document.querySelector("#esfera4");
+          var c5 = document.querySelector("#esfera5");
+          
+        
+          var a1 = document.querySelector("#audioefecto2");
+          var a2 = document.querySelector("#audioefecto1");
+          var a3 = document.querySelector("#audioefecto3");
+          var a4 = document.querySelector("#audioefecto5");
+          var a5 = document.querySelector("#audioefecto4");
+         
+          
+          c1.addEventListener("mouseenter", function(){
+            console.log("entro")
+            a1.components.sound.playSound()
+          })
+          c1.addEventListener("mouseleave", function(){
+            console.log("salio")
+            a1.components.sound.pauseSound()
+          })
+      
+          c2.addEventListener ("mouseenter", function (){
+            console.log("dentro")
+            a2.components.sound.playSound ()
+          })
+          
+          c2.addEventListener("mouseleave", function (){
+            console.log("fuera") 
+            a2.components.sound.pauseSound()
+          })
+
+          c3.addEventListener ("mouseenter", function (){
+            console.log("arriba")
+            a3.components.sound.playSound ()
+          })
+          
+          c3.addEventListener("mouseleave", function (){
+            console.log("abajo") 
+            a3.components.sound.pauseSound()
+          })
+
+          c4.addEventListener ("mouseenter", function (){
+            console.log("arriba2")
+            a4.components.sound.playSound ()
+          })
+          
+          c4.addEventListener("mouseleave", function (){
+            console.log("abajo2") 
+            a4.components.sound.pauseSound()
+          })
+
+          c5.addEventListener ("mouseenter", function (){
+            console.log("arriba")
+            a5.components.sound.playSound ()
+          })
+          
+          c5.addEventListener("mouseleave", function (){
+            console.log("abajo") 
+            a5.components.sound.pauseSound()
+          })
+
+      
+ 
+          
+          </script>
+        
+    </a-scene>
+    
+  </body>
+</html>
